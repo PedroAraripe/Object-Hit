@@ -228,6 +228,23 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &293576761 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 9073690150226504692, guid: 5ced8475f24a04044b0a75e7ecfd06e2, type: 3}
+  m_PrefabInstance: {fileID: 474610628}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &293576766
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 293576761}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0991a6dc035ba244af627a01f81604d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &330585543
 GameObject:
   m_ObjectHideFlags: 0
@@ -476,9 +493,6 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 9073690150226504692, guid: 5ced8475f24a04044b0a75e7ecfd06e2, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1328614134}
-    - targetCorrespondingSourceObject: {fileID: 9073690150226504692, guid: 5ced8475f24a04044b0a75e7ecfd06e2, type: 3}
-      insertIndex: -1
       addedObject: {fileID: 1328614133}
   m_SourcePrefab: {fileID: 100100000, guid: 5ced8475f24a04044b0a75e7ecfd06e2, type: 3}
 --- !u!1 &410087039
@@ -661,7 +675,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 9073690150226504692, guid: 5ced8475f24a04044b0a75e7ecfd06e2, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 293576766}
   m_SourcePrefab: {fileID: 100100000, guid: 5ced8475f24a04044b0a75e7ecfd06e2, type: 3}
 --- !u!1001 &475539266
 PrefabInstance:
@@ -1042,6 +1059,33 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1d38179c082334743bd0c1fb9ac13097, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!54 &857935302
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 857935290}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1001 &944986485
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1321,6 +1365,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 9073690150226504692, guid: 5ced8475f24a04044b0a75e7ecfd06e2, type: 3}
       insertIndex: -1
       addedObject: {fileID: 857935297}
+    - targetCorrespondingSourceObject: {fileID: 9073690150226504692, guid: 5ced8475f24a04044b0a75e7ecfd06e2, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 857935302}
   m_SourcePrefab: {fileID: 100100000, guid: 5ced8475f24a04044b0a75e7ecfd06e2, type: 3}
 --- !u!1 &1328614132 stripped
 GameObject:
@@ -1337,18 +1384,6 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: aa8608d0604e68b4bbd1886cff48d8df, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &1328614134
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1328614132}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d0991a6dc035ba244af627a01f81604d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1699991704 stripped
@@ -1529,7 +1564,7 @@ GameObject:
   - component: {fileID: 2056419623}
   m_Layer: 0
   m_Name: Player Thanos
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
