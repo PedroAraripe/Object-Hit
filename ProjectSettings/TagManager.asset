@@ -8,6 +8,7 @@ TagManager:
   - DroppableFinished
   - DroppableStarted
   - Hitted
+  - Projectile
   layers:
   - Default
   - TransparentFX
