@@ -4,8 +4,6 @@ using UnityEngine;
 
 public class TriggerStartGame : MonoBehaviour
 {
-    // ^ inactive
-    // v started 
     GameObject[] FindDroppables(string tag) {
         GameObject[] droppables = GameObject.FindGameObjectsWithTag(tag);
         return droppables;
@@ -25,11 +23,31 @@ public class TriggerStartGame : MonoBehaviour
         UpdateDroppablesTag("DroppableInactive", "DroppableFinished");
     }
 
+    void RestartProjectiles() {
+        foreach(GameObject projectile in GameObject.FindGameObjectsWithTag("Projectile")) {
+            projectile.GetComponent<FollowPlayer>().enabled = false;
+            projectile.GetComponent<MeshRenderer>().enabled = false;
+        }
+    }
+    
+    void StartProjectiles() {
+        foreach(GameObject projectile in GameObject.FindGameObjectsWithTag("Projectile")) {
+            projectile.GetComponent<FollowPlayer>().enabled = true;
+            projectile.GetComponent<MeshRenderer>().enabled = true;
+        }
+    }
+
     private void OnTriggerEnter(Collider other) {
-        RestartDroppables();
+        if(other.CompareTag("Player")) {
+            RestartDroppables();
+            RestartProjectiles();
+        }
     }
 
     private void OnTriggerExit(Collider other) {
-        StartDroppables();
+        if(other.CompareTag("Player")) {
+            StartDroppables();
+            StartProjectiles();
+        }
     }
 }

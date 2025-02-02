@@ -9,6 +9,9 @@ TagManager:
   - DroppableStarted
   - Hitted
   - Projectile
+  - Horizontal
+  - Vertical
+  - Ground
   layers:
   - Default
   - TransparentFX
