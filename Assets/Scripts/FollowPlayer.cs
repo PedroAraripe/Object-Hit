@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class FollowPlayer : MonoBehaviour
 {
-    float projectileSpeed = 10;
+    float projectileSpeed = 7;
 
     void Update()
     {
